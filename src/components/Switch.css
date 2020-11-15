@@ -3,8 +3,6 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-
-  background-color: red;
 }
 
 .switch-label input {
@@ -22,6 +20,7 @@
   bottom: 0;
 
   background-color: aqua;
+  transition: 0.4s;
 }
 
 .switch-slider::before {
@@ -34,4 +33,21 @@
   bottom: 4px;
 
   background-color: aliceblue;
+  transition: 0.4s;
+}
+
+input:checked + .switch-slider {
+  background-color: blue;
+}
+
+input:checked + .switch-slider:before {
+  transform: translateX(26px);
+}
+
+.switch-slider.roundet {
+  border-radius: 34px;
+}
+
+.switch-slider.roundet::before {
+  border-radius: 50%;
 }
